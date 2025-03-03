@@ -1,6 +1,6 @@
 # User API ( Course-Microsoft-Back-End-Development .NET )
 
-Welcome to the User API project! This API allows you to manage users with basic CRUD operations. The API is built using ASP.NET Core and leverages JWT authentication for secure access.
+Welcome to the User API project! This API allows you to manage users with basic CRUD operations. The API is built using ASP.NET Core and authentication for secure access.
 
 ## Table of Contents
 
