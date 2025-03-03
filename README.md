@@ -19,7 +19,6 @@ Welcome to the User API project! This API allows you to manage users with basic 
 - Add a new user
 - Update an existing user's details
 - Remove a user by ID
-- JWT-based authentication
 - Middleware logging
 - Model validation
 
