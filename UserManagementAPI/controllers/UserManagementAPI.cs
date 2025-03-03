@@ -9,6 +9,7 @@ namespace UserApi.Controllers
     {
         private static readonly ConcurrentDictionary<string, User> users = new ConcurrentDictionary<string, User>();
 
+        // GET: Retrieve a list of users or a specific user by ID
         [HttpGet]
         public IActionResult GetUsers([FromQuery] string? id)
         {
@@ -23,9 +24,15 @@ namespace UserApi.Controllers
             return Ok(users.Values);
         }
 
+        // POST: Add a new user
         [HttpPost]
-        public IActionResult AddUser(User user)
+        public IActionResult AddUser([FromBody] User user)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             if (users.ContainsKey(user.Id))
             {
                 return BadRequest(new { error = "User already exists" });
@@ -34,9 +41,15 @@ namespace UserApi.Controllers
             return CreatedAtAction(nameof(GetUsers), new { id = user.Id }, new { message = "User added successfully" });
         }
 
+        // PUT: Update an existing user's details
         [HttpPut("{id}")]
-        public IActionResult UpdateUser(string id, User updatedUser)
+        public IActionResult UpdateUser(string id, [FromBody] User updatedUser)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             if (!users.ContainsKey(id))
             {
                 return NotFound(new { error = "User not found" });
@@ -45,6 +58,7 @@ namespace UserApi.Controllers
             return Ok(new { message = "User updated successfully" });
         }
 
+        // DELETE: Remove a user by ID
         [HttpDelete("{id}")]
         public IActionResult DeleteUser(string id)
         {

@@ -465,11 +465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Ahmed\\Microsoft Course\\Project\\UserManagementAPI\\UserManagementAPI.csproj",
+      "projectUniqueName": "E:\\Ahmed\\Microsoft_Course\\Project\\UserManagementAPI\\UserManagementAPI.csproj",
       "projectName": "UserManagementAPI",
-      "projectPath": "E:\\Ahmed\\Microsoft Course\\Project\\UserManagementAPI\\UserManagementAPI.csproj",
+      "projectPath": "E:\\Ahmed\\Microsoft_Course\\Project\\UserManagementAPI\\UserManagementAPI.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "E:\\Ahmed\\Microsoft Course\\Project\\UserManagementAPI\\obj\\",
+      "outputPath": "E:\\Ahmed\\Microsoft_Course\\Project\\UserManagementAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
